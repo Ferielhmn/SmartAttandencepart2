@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
+   
+}
+
+.navBar{
+  position: fixed;
+    width:100% ;
+    height:14vh ;
+    display: flex;
+    background: linear-gradient(to right, #3C89DB, #8EC5FC);
+   
+}
+
+.nav-left{
+    width: 90%;
+    margin-left: 18px;
+    margin-top: 17px;
+    
+    font-family:'Mochiy Pop One',sans-serif ;
+    font-size: 13.5px;
+    color: #FFFFFF;
+}
+
+.nav-right button{
+width: 10%;
+text-align: right;
+margin-right: 40px;
+ margin-top: 28px;
+ font-size: 15px;
+ color:#FFFFFF;
+ font-family:'Mochiy Pop One',sans-serif ;
+cursor: pointer;
+border:none;
+background-color: transparent;
+
+}
+
+.mainy{
+    width: 100%;
+     height:86vh ;
+      margin-top: 14vh;
+    background-color: white;
+     
+}
+.title-main h1{
+font-size: 20px;
+    margin-left: 360px;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(94, 93, 93);
+ 
+}
+
+.hello{
+  width: 200vh;
+  
+     border-collapse: collapse; 
+     margin-top: 10px;
+    margin-left: 7.5px;
+     
+}
+
+ th{
+   background: #8EC5FC;
+    padding: 12px;
+    border :1px solid black;
+    border-collapse: collapse;
+}
+ tr{
+    border:1px solid black;
+ }
+ tbody{
+
+    background-color: #cfe6fc;
+    padding: 10px;
+    
+ }
+ .center{
+padding: 20px;
+margin-left: 2px;
+
+ }
+ td{
+    padding: 4.5px;
+    color: rgb(27, 26, 26);
+    border: 1px solid black ;
+ }
+ .firstinput{
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+     accent-color: #3C89DB;
+ }
+ .design-text{
+
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+ .oneligne{
+ color:#FFFFFF;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }

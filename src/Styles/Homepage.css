@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    display:flex;
+}
+.main-left{
+background-color:#3C89DB;
+width: 40%;
+border-top-right-radius: 23px;
+border-bottom-right-radius: 23px;
+
+}
+.main-left h1{
+    font-family:'Mochiy Pop One',sans-serif;
+    font-size: 41px;
+    color: #FFFFFF;
+    padding:30px;
+    margin-top: 140px;
+}
+.main-left .text1{
+font-family: 'AbeeZee',sans-serif;
+margin-left: 27px;
+font-size: 25px;
+margin-top: -15px;
+color:#FFFFFF
+
+}
+.main-left .text2{
+font-family: 'AbeeZee',sans-serif;
+margin-left: 40px;
+font-size: 23px;
+color: #FFFFFF;
+
+}
+.main-right{
+background-color:#FFFFFF;
+width: 60%;
+
+}
+.main-right .box{
+    padding: 120px;
+    margin-left: 140px;
+
+}
+.box h1{
+   font-family:'Mochiy Pop One',sans-serif; 
+   font-size: 32.5px;
+   color:#3C89DB;
+   margin-left: 40px;
+}
+.box .input{
+    margin-top: 30px;
+    margin-left: 22px;
+height: 38px;
+width: 280px;
+border-radius: 45px;
+ border : 2px solid #3C89DB;
+ outline: none;
+ color: #3C89DB;
+ padding-left: 34px;
+ font-family:'AbeeZee',sans-serif; 
+
+}
+
+.remember{
+margin-left: 30px;
+margin-top: 17px;
+display: flex;
+
+}
+
+.check{
+   accent-color: #3C89DB;
+   cursor: pointer;
+}
+.checkboxtext{
+    font-family: 'Mochiy Pop One',sans-serif; 
+    font-size: 12px;
+    color: #3C89DB;
+    margin-left: 3px;
+}
+.box button{
+     margin-top: 18px;
+    margin-left: 22px;
+height: 34px;
+width: 280px;
+border-radius: 45px;
+background-color: #3C89DB;
+border : 2px solid #3C89DB;
+font-family: 'Mochiy Pop One',sans-serif;
+color:#FFFFFF;
+font-size: 15px;
+cursor: pointer;
+
+}
+
+
