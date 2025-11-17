@@ -1,5 +1,6 @@
 import React from 'react';
 import "../Styles/Homepage.css";
+import loginiconremo from "../Icons/loginiconremo.png";
 
 function Homepage({ onSingUpClick }){
 return(
@@ -7,8 +8,8 @@ return(
     <div className="main-top">
 
 <h1>SmartAttendance</h1>
-<p className="text1">Authorized users only -</p>
-<p className="text2">please sign in to access your dashboard.</p>
+<p className="text1">Authorized users only</p>
+
 
 
     </div>
@@ -25,7 +26,8 @@ return(
 </select>
   
   <br></br>
- 
+  <input className='input'  type ='nember' placeholder='ID User' />
+ <br></br>
 <input className='input'  type ='text' placeholder='First Name' />
  
 <br></br>
@@ -33,6 +35,7 @@ return(
 <br></br>
 
 <button onClick={onSingUpClick}>Sing Up</button>
+ <img src={loginiconremo} alt="students"className='photopi'width="150px" height="90px"  />
 
  </form>
 </div>

@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+
 import Recordattendence from "./Components/Recordattendance";
 import Addstudent from "./Components/Addstudent";
 import Homepage from "./Components/Homepage";
 import Showreport from "./Components/Showreport";
+import Welcome from "./Components/Welcome";
 
 import "./App.css";
 
 function App() {
-  const [page, setPage] = useState("home");
+  const [page, setPage] = useState("welcome");
 
   const [students, setStudents] = useState([
     {
@@ -29,16 +31,13 @@ function App() {
     setStudents((prev) =>
       prev.map((student, i) => {
         if (i === index) {
-          // Calcul des absences
           const newAbs = student.Absences - (checked ? 1 : -1);
 
-          // Déterminer la couleur selon les absences
           let newColor = "#8EC5FC";
-          if (newAbs < 3) newColor = "green";
-          else if (newAbs === 3) newColor = "yellow";
-          else newColor = "red";
+          if (newAbs < 3) newColor = "#B30000";
+          else if (newAbs === 3) newColor = "#FFE135";
+          else newColor = "#74C365";
 
-          // Retourner le nouvel objet étudiant avec absences et couleur mises à jour
           return { ...student, Absences: newAbs, color: newColor };
         }
         return student;
@@ -80,25 +79,29 @@ function App() {
     }
   }
 
-  // const [color, setColor] = useState("#8EC5FC");
+  // Statistiques
+  const totalStudents = students.length;
+  const totalAbsences = students.reduce((sum, s) => sum + s.Absences, 0);
+  const totalParticipation = students.reduce(
+    (sum, s) => sum + s.Participation,
+    0
+  );
 
-  // function changecolor(index) {
-  //   let newcolor = "#8EC5FC";
-  //   if (students[index].Absences < 3) {
-  //     newcolor = "green";
-  //     setColor(newcolor);
-  //   } else if (students[index].Absences === 3) {
-  //     newcolor = "yellow";
-  //     setColor(newcolor);
-  //   } else {
-  //     newcolor = "red";
-  //     setColor(newcolor);
-  //   }
-  //   return newcolor;
-  // }
+  const avgAbsences =
+    totalStudents > 0 ? (totalAbsences / totalStudents).toFixed(1) : "0.0";
+  const avgParticipation =
+    totalStudents > 0 ? (totalParticipation / totalStudents).toFixed(1) : "0.0";
+  const attendancePercentage =
+    totalAbsences + totalParticipation > 0
+      ? (
+          (totalParticipation / (totalParticipation + totalAbsences)) *
+          100
+        ).toFixed(1)
+      : "0.0";
 
   return (
     <div>
+      {page === "welcome" && <Welcome onSingUpClick={() => setPage("home")} />}
       {page === "home" && <Homepage onSingUpClick={() => setPage("record")} />}
 
       {page === "record" && (
@@ -123,7 +126,14 @@ function App() {
         />
       )}
 
-      {page === "report" && <Showreport />}
+      {page === "report" && (
+        <Showreport
+          totalStudents={Number(totalStudents)}
+          avgAbsences={Number(avgAbsences)}
+          avgParticipation={Number(avgParticipation)}
+          attendancePercentage={Number(attendancePercentage)}
+        />
+      )}
     </div>
   );
 }

@@ -1,68 +1,68 @@
 import React from 'react';
+
 import "../Styles/Showreport.css";
 
-import absences from "../Icons/absences.png";
-import attandences from "../Icons/attandences.png";
-import participation from "../Icons/participation.png";
-import students from "../Icons/students.png"
+import absencesIcon from "../Icons/absences.png";
+import attandencesIcon from "../Icons/attandences.png";
+import participationIcon from "../Icons/participation.png";
+import studentsIcon from "../Icons/students.png";
+import ReportChart from "./ReportChart";
 
-function Showreport() {
+function Showreport({ totalStudents, avgAbsences, avgParticipation, attendancePercentage }) {
+  return (
+    <div className="Showreport">
+      <div className='partone'>
+        <div className='parttop'>
+          <h1>Smartattandence</h1>
+        </div>
+        <p className='partbutton'>Reports</p>
+      </div>
 
-return(
-    <div  className="Showreport">
-  <div className='partone'>
-    <div className='parttop'>
-<h1>Smartattandence</h1>
-</div>
-<p1 className='partbutton'>Reports</p1>
+      <div className='parttwo'>
 
-  </div>
+        <ul className='carttypeone'>
+          <div className='flex_it'>
+            <img src={studentsIcon} alt="students" width="38px" height="25px" />
+            <li>{totalStudents}</li>
+          </div>
+          <li className='do'>Total Students</li>
+        </ul>
 
-<div className='parttwo'>
+        <ul className='carttypetwo'>
+          <div className='flex_it'>
+            <img src={absencesIcon} alt="absences" width="38px" height="25px" />
+            <li>{avgAbsences}%</li>
+          </div>
+          <li className='do'>Average Absences</li>
+        </ul>
 
-<ul className='carttypeone'>
-    <div className='flex_it'>
-    <img src={students} alt="absences " width="38px" height="25px" />
-<li>109</li>
-</div>
-<li  className='do'>Total Students</li>
+        <ul className='carttypeone'>
+          <div className='flex_it'>
+            <img src={participationIcon} alt="participation" width="38px" height="25px" />
+            <li>{avgParticipation}%</li>
+          </div>
+          <li className='do'>Average Participation</li>
+        </ul>
 
-</ul>
+        <ul className='carttypetwo'>
+          <div className='flex_it'>
+            <img src={attandencesIcon} alt="attendance" width="38px" height="25px" />
+            <li>{attendancePercentage}%</li>
+          </div>
+          <li className='do'>Attendance Percentage</li>
+        </ul>
 
-
-<ul className='carttypetwo'>
-   <div className='flex_it'>
- <img src={attandences} alt="absences " width="38px" height="25px" />
-<li>66%</li>
- </div>
-<li  className='do'>Attandences</li>
-
-</ul>
-
-<ul className='carttypeone'>
-     <div className='flex_it'>
-        <img src={absences} alt="absences " width="38px" height="25px" />
-<li>44%</li>
-</div> 
-<li className='do'>  Absences</li>
-
-</ul>
-
-
-<ul className='carttypetwo'>
-      <div className='flex_it'>
-        <img src={participation} alt="absences " width="38px" height="25px" />
-<li>52%</li>
-</div>
-<li  className='do'>Participation</li>
-
-</ul>
-
-</div>
+      </div>
+     <ReportChart
+  totalStudents={Number(totalStudents)}
+  avgAbsences={Number(avgAbsences)}
+  avgParticipation={Number(avgParticipation)}
+  attendancePercentage={Number(attendancePercentage)}
+/>
 
     </div>
-)
-
+  
+  );
 }
 
 export default Showreport;

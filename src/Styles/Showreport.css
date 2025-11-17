@@ -1,7 +1,9 @@
-*{
+/*{
 padding: 0;
 margin: 0;
 box-sizing: border-box;
+
+
 
 }
 .Showreport{
@@ -14,13 +16,8 @@ box-sizing: border-box;
 
 height: 20vh;
 
-
-
-
-
 }
  .parttop{
- 
 
 
 }
@@ -43,8 +40,9 @@ margin-bottom: 12px;
   
 }
 .parttwo{
-    height: 80vh;
-
+  height: 80vh;
+display: flex;
+justify-content: space-around;
  
 
 }
@@ -98,4 +96,122 @@ margin-top: 20px;
   font-size: 13px;
   color:#221F1F;
     margin-left: 99px;
+}*/
+/* Reset général */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Conteneur principal */
+.Showreport {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* prend toute la hauteur de l'écran */
+  padding: 20px;
+  background-color: #f5f8ff;
+}
+
+/* Partie haut */
+.partone {
+  flex: 0 0 20%; /* 20% de la hauteur pour le header */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.parttop h1 {
+  font-family: 'Mochiy Pop One', sans-serif; 
+  color: #3C89DB; 
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.partbutton {
+  color: #3C89DB;
+  font-family: "Modern Antiqua", serif;
+  font-size: 27px;
+  margin-left: 0; /* centré avec le padding global */
+}
+
+/* Partie cartes */
+.parttwo {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/* Cartes */
+.carttypeone,
+.carttypetwo {
+  height: 100px;
+  width: 280px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  padding: 10px;
+  color: #221F1F;
+  font-family: sans-serif;
+}
+
+.carttypeone {
+  background-color: #3491f5;
+}
+
+.carttypetwo {
+  background-color: #5ca6f4;
+}
+
+.flex_it {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.carttypeone .do,
+.carttypetwo .do {
+  font-size: 13px;
+  margin-left: 60px;
+}
+
+/* Chart Container */
+.ReportChartContainer {
+  width: 100%;
+   height: 300px; 
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+
+@media (max-width: 768px) {
+  .parttwo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carttypeone,
+  .carttypetwo {
+    width: 90%;
+  }
+
+  .ReportChartContainer {
+    width: 95%;
+  }
 }

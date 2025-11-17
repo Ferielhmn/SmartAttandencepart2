@@ -1,0 +1,140 @@
+/**{
+    padding: 0;
+    margin: 0;
+    padding: 0;
+}
+.welcome{
+    width: 100%;
+    height: 100vh;
+  
+}
+.loginapp{
+    text-align: center;
+    padding: 30px;
+    gap:50px;
+}
+.firsttitle{
+font-family: 'Encode Sans Expanded', sans-serif;
+color: #3C89DB;
+padding-top: 72px;
+font-size: 40px;
+
+
+}
+.secondtitle{
+   font-family: 'Encode Sans Expanded', sans-serif; 
+   color: rgb(20, 19, 19);
+  font-size: 15px;
+  font-weight:400;
+  padding-top: 9.9px;
+ 
+}
+.loginbutton{
+    height: 34px;
+width: 250px;
+margin-top: 70px;
+border-radius: 10px;
+background-color:#3C89DB;
+border : 2px solid #3C89DB;
+font-family: 'Encode Sans Expanded', sans-serif; 
+color:#FFFFFF;
+font-size: 20px;
+font-weight:600;
+cursor: pointer;
+
+}
+.photo{
+    margin-top: 40px;
+}*/
+/* RESET propre */
+/* RESET propre */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Animation Fade-In pour toute la page */
+body {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* SECTION GLOBALE */
+.welcome {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Conteneur */
+.loginapp {
+  text-align: center;
+  padding: 30px;
+}
+
+/* TITRE PRINCIPAL */
+.firsttitle {
+  font-family: 'Encode Sans Expanded', sans-serif;
+  color: #3C89DB;
+  margin-top: 20px;       /* ➜ plus propre que padding-top */
+  font-size: 40px;
+  font-weight: 700;
+  animation: slideDown 0.6s ease;
+}
+
+/* sous-titre */
+.secondtitle {
+  font-family: 'Encode Sans Expanded', sans-serif;
+  color: #141313;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* BOUTON LOGIN */
+.loginbutton {
+  height: 40px;
+  width: 260px;
+  margin-top: 50px;
+  border-radius: 10px;
+  background-color: #3C89DB;
+  border: none;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Effet hover moderne */
+.loginbutton:hover {
+  background-color: #2f74c1;
+  transform: scale(1.03);
+}
+
+/* PHOTO */
+.photo {
+  margin-top: 40px;
+  animation: slideUp 0.8s ease;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

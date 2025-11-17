@@ -1,4 +1,4 @@
-*{
+/**{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,72 +11,73 @@
 .main-top{
 background-color:#FFFFFF;
 width: 100%;
-height: 25vh;
+height: 20vh;
 
 
 }
 .main-top h1{
-    font-family:'Mochiy Pop One',sans-serif;
-    font-size: 30vw;
+    font-family:'Encode Sans Expanded', sans-serif;
+    font-size: 36px;
     color:#3C89DB;
-    padding-top: 5vh;  /*  padding:32px; */
+    padding-top: 5px;  /*  padding:32px; 
    text-align: center;
   
 }
 .main-top .text1{
 font-family: 'AbeeZee',sans-serif;
-margin-left: 27vw;
-font-size: 18vw;
+margin-left: 8px;
+font-size:20px;
 color:#3C89DB;
 
 }
 .main-top .text2{
 font-family: 'AbeeZee',sans-serif;
-margin-left: 40vw;
-font-size: 15vw;
+margin-left: 8px;
+font-size: 18px;
 color: #3C89DB;
 
 
 } 
 .main-buttom{
     background-color:#3C89DB;
-    height: 75vh;
-    border-top-right-radius: 33vw;
+    height: 80vh;
+    border-top-right-radius: 25px;
 }
 
 .box{
-/*
+
 width: 100%;
 
 text-align: center;
 padding: 20px;
 padding-top: 30px;
 font-size: 20px;
-*/
 
+/*
 width: 90%;
   margin: 0 auto;
   text-align: center;
   padding: 4vh 0;
   font-size: 4vw;
-
+*
 }
+ 
 
 .box h1{
-    /*
+   
    font-family:'Mochiy Pop One',sans-serif; 
    font-size: 34px;
    color:#FFFFFF;
    margin-left: 10px;
-  */
+   /*
 font-family: 'Mochiy Pop One', sans-serif;
   font-size: 5vw;
   color: #ffffff;
-
+*
 }
 
 .box .input{
-    /*
+   
    margin-top: 30px; 
     margin-left: 22px;
 height: 38px;
@@ -88,7 +89,7 @@ border-radius: 15px;
  padding-left: 34px;
  font-family:'AbeeZee',sans-serif; 
  background-color: #FFFFFF;
-*/
+ /*
  margin-top: 4vh;
   width: 80vw;
   height: 6vh;
@@ -102,7 +103,7 @@ border-radius: 15px;
 
 
 
-
+*
 
 
 }
@@ -114,7 +115,7 @@ border-radius: 15px;
 
 
 .box button{
-    /*
+    
      margin-top: 18px; 
     margin-left: 22px;
 height: 34px;
@@ -126,8 +127,8 @@ font-family: 'Mochiy Pop One',sans-serif;
 color:#3C89DB;
 font-size: 15px;
 cursor: pointer;
-*/
 
+/*
  margin-top: 3vh;
   width: 80vw;
   height: 6vh;
@@ -138,7 +139,493 @@ cursor: pointer;
   color: #3c89db;
   font-size: 4vw;
   cursor: pointer;
+*
+}
 
+@media only screen and (max-width: 430px) {
+    .main {
+        height: auto;
+        padding: 10px;
+    }
+
+    .main-top h1 {
+        font-size: 28px;
+    }
+
+    .box .input, .box button {
+        width: 90%;
+        font-size: 14px;
+    }
+}
+
+/* RESET 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CONTAINER PRINCIPAL 
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+}
+
+/* ======================== 
+/*       PARTIE TOP         
+/* ======================== 
+
+.main-top {
+    height: 20vh;
+    padding: 20px 10px;
+    background-color: #FFFFFF;
+}
+
+.main-top h1 {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 36px;
+    color: #3C89DB;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.main-top .text1,
+.main-top .text2 {
+    font-family: 'AbeeZee', sans-serif;
+    font-size: 18px;
+    color: #3C89DB;
+    margin-left: 10px;
+}
+
+.main-top .text1 {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+/* ======================== */
+/*       PARTIE BOTTOM      */
+/* ======================== *
+
+.main-buttom {
+    background-color: #3C89DB;
+    flex: 1;
+    border-top-right-radius: 25px;
+    padding: 25px 15px;
+}
+
+.box {
+    width: 100%;
+    text-align: center;
+}
+
+.box h1 {
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 34px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+
+/* ======================== */
+/*         INPUTS           */
+/* ======================== *
+
+.box .input {
+    height: 40px;
+    width: 280px;
+    border-radius: 14px;
+    border: 2px solid #FFFFFF;
+    outline: none;
+    color: #3C89DB;
+    padding-left: 34px;
+    font-family: 'AbeeZee', sans-serif;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+    transition: border-color 0.25s ease;
+}
+
+.box .input:focus {
+    border-color: #d4ecff;
+}
+
+/* ======================== */
+/*         BUTTON           */
+/* ======================== *
+
+.box button {
+    height: 40px;
+    width: 280px;
+    border-radius: 45px;
+    background-color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    font-family: 'Mochiy Pop One', sans-serif;
+    color: #3C89DB;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.box button:hover {
+    background-color: #eef6ff;
+    transform: scale(1.03);
+}
+
+/* ======================== */
+/*        MOBILE STYLE      */
+/* ======================== 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    background-color: #FFFFFF;
+}
+
+/* ======================== */
+/*        MAIN CONTAINER    */
+/* ======================== 
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ======================== */
+/*           TOP            */
+/* ======================== 
+
+.main-top {
+    padding: 25px 20px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+.main-left{
+    width: 50%;
+}
+
+.main-top h1 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #3C89DB;
+    
+    margin-bottom: 10px;
+}
+
+.main-top .text1
+ {
+    font-family: 'AbeeZee', sans-serif;
+    color: #3C89DB;
+}
+
+.main-top .text1 {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+
+/* ======================== */
+/*          BOTTOM          */
+/* ======================== 
+
+.main-buttom {
+    flex: 1;
+    background-color: #3C89DB;
+    border-top-right-radius: 28px;
+    padding: 35px 15px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ======================== */
+/*           BOX            */
+/* ======================== 
+
+.box {
+    padding-bottom: 20px;
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+}
+
+.box h1 {
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 30px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    background-color: black;
+}
+
+/* ======================== */
+/*       INPUTS + SELECT    */
+/* ======================== 
+
+.input {
+    height: 40px;
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid #FFFFFF;
+    outline: none;
+    padding-left: 14px;
+    color: #3C89DB;
+    font-family: 'AbeeZee', sans-serif;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    margin-bottom: 18px;
+    transition: border 0.25s ease, box-shadow 0.25s ease;
+}
+.photoio{
+    height: 90px;
+    width: 100px;
+}
+
+/* Effet focus PRO 
+.input:focus {
+    border: 2px solid #d4ecff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.45);
+}
+
+/* corriger le select arrow 
+.input select {
+    border: none;
+}
+
+/* ======================== */
+/*          BUTTON          */
+/* ======================== 
+
+.box button {
+    height: 40px;
+    width: 100%;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+    border: none;
+    font-family: 'Mochiy Pop One', sans-serif;
+    color: #3C89DB;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Hover PRO 
+.box button:hover {
+    background-color: #e9f2ff;
+    transform: translateY(-2px) scale(1.03);
+}
+
+/* ======================== */
+/*         RESPONSIVE       */
+/* ======================== 
+
+@media (max-width: 430px) {
+
+    .main-top h1 {
+        font-size: 32px;
+    }
+
+    .main-top .text1,
+    .main-top .text2 {
+        font-size: 15px;
+    }
+
+    .box h1 {
+        font-size: 26px;
+    }
+
+    .input,
+    button {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .main-top h1 {
+        font-size: 28px;
+    }
+
+    .main-top .text1, .main-top .text2 {
+        font-size: 16px;
+    }
+
+    .box .input,
+    .box button {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .box h1 {
+        font-size: 28px;
+    }
+}
+*/
+/* ======================== */
+/*         RESET            */
+/* ======================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    background-color: #FFFFFF;
+}
+
+/* ======================== */
+/*        MAIN CONTAINER    */
+/* ======================== */
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* reste dans l'écran */
+}
+
+/* ======================== */
+/*           TOP            */
+/* ======================== */
+.main-top {
+    height: 20vh;
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-top h1 {
+    font-size: 36px;
+    color: #3C89DB;
+    font-family:'Encode Sans Expanded', sans-serif;
+    margin-bottom: 5px;
+}
+
+.main-top .text1 {
+    font-family: 'AbeeZee', sans-serif;
+    font-size: 20px;
+    color: #3C89DB;
+    margin-bottom: 3px;
+}
+
+.main-top .text2 {
+    font-family: 'AbeeZee', sans-serif;
+    font-size: 18px;
+    color: #3C89DB;
+}
+
+/* ======================== */
+/*         BOTTOM           */
+/* ======================== */
+.main-buttom {
+    flex: 1; /* prend le reste de la hauteur */
+    background-color: #3C89DB;
+    border-top-right-radius: 28px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto; /* scroll si contenu trop grand */
+}
+
+/* ======================== */
+/*           BOX            */
+/* ======================== */
+.box {
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* BOX TITLE */
+.box h1 {
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 30px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    /* retire background-color si tu veux qu'il soit transparent */
+}
+
+/* ======================== */
+/*          INPUTS          */
+/* ======================== */
+.input {
+    width: 100%;
+    height: 40px;
+    border-radius: 12px;
+    border: 2px solid #FFFFFF;
+    outline: none;
+    padding-left: 14px;
+    font-family: 'AbeeZee', sans-serif;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    color: #3C89DB;
+    margin-bottom: 18px;
+    transition: border 0.25s ease, box-shadow 0.25s ease;
+}
+
+.input:focus {
+    border: 2px solid #d4ecff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.45);
+}
+
+.input select {
+    border: none;
+}
+
+/* ======================== */
+/*          BUTTON          */
+/* ======================== */
+.box button {
+    width: 100%;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+    border: none;
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 17px;
+    color: #3C89DB;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.box button:hover {
+    background-color: #e9f2ff;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ======================== */
+/*         PHOTO            */
+/* ======================== */
+.photoio {
+    height: 90px;
+    width: 100px;
+}
+
+/* ======================== */
+/*         RESPONSIVE       */
+/* ======================== */
+@media (max-width: 768px) {
+    .main-top h1 { font-size: 28px; }
+    .main-top .text1 { font-size: 16px; }
+    .main-top .text2 { font-size: 14px; }
+    .box h1 { font-size: 26px; }
+    .input, .box button { font-size: 15px; }
+}
+
+@media (max-width: 430px) {
+    .main-top h1 { font-size: 24px; }
+    .main-top .text1, .main-top .text2 { font-size: 14px; }
+    .box h1 { font-size: 22px; }
+    .input, .box button { font-size: 14px; width: 90%; }
 }
 
 
